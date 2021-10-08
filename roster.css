@@ -1,0 +1,109 @@
+h1{
+	text-align:center;
+	border-bottom:5px solid black;
+	padding-bottom:20px;
+} 
+
+body{
+	margin:0;
+}
+
+.times{
+	text-align:center;
+}
+
+.buttons{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+}
+
+.button{
+	width:100px;
+	height:60px;
+	
+}
+
+.row{
+	border:1px solid black;
+	width:100px;
+	height:50px;
+	text-align:center;
+}
+
+.table4 .row3,
+.table5 .row0,
+.table5 .row1,
+.table5 .row2,
+.table5 .row3,
+.table6 .row0,
+.table6 .row1,
+.table6 .row2{
+	background:gray;
+}
+
+
+.table{
+	display:flex;
+	flex-flow:column nowrap;
+}
+
+.all{
+	display:flex;
+}
+
+.body{
+	display:flex;
+	justify-content:space-evenly;
+}
+.namelist{
+	display:flex;
+	flex-flow:column nowrap;
+	
+}
+
+.name{
+	width:80px;
+	text-align:center;
+}
+.nameanddate{
+	display:flex;
+	flex-flow:row nowrap;
+	border:1px solid black;
+	height:30px;
+}
+
+.n0,.n2,.n4,.n6,.n8,.n10{
+	background:gray;
+}
+
+.times{
+	width:40px;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
