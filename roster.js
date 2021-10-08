@@ -133,7 +133,7 @@ function get(){
 					}
 				//table에 이미 이름이 작성되있는칸을 제외하고 
 				//위에서 만들어진 namelist에서 랜덤으로 이름을 해당table에 넣는다.
-				if(document.querySelector('.table'+c+' .row'+r).value){
+				if(document.querySelector('.table'+c+' .row'+r).value==""){
 				}else{
 					var ran = namelist[Math.floor(Math.random()*namelist.length)]
 					document.querySelector('.table'+c+' .row'+r).value=ran;
