@@ -42,10 +42,10 @@ body{
 	background:gray;
 }
 
-
 .table{
 	display:flex;
 	flex-flow:column nowrap;
+	text-align:center;
 }
 
 .all{

@@ -1,4 +1,154 @@
-var namelist = [];
+
+var makeroster = {}
+
+makeroster.cantalert = function(){
+	if(cant==300){
+			terminate = 1;
+			alert('해당 인원으로는 조건을 만족하는 근무표 생성이 불가능 합니다.')
+		}
+}
+
+makeroster.getnamelist = function(){
+	var namelist = [];
+	var i = 0
+	while(i<12){
+		namelist.push(document.querySelector('.name'+i).value);
+		i=i+1;
+	}
+	while(namelist.indexOf("") != -1){
+		namelist.splice(namelist.indexOf(""),1);  
+	}
+	document.write(namelist)
+}
+
+makeroster.grosamerow = function(){
+	var i = 0;
+	while(i<7){
+		if(namelist.indexOf(document.querySelector('.table'+i+' .row'+r).value) !=-1){
+			namelist.splice(namelist.indexOf(document.querySelector('.table'+i+' .row'+r).value),1);
+			i=i+1;
+		}else{
+			i=i+1;
+		}
+	}
+}
+
+makeroster.grosamecolumn = function(){
+	var i = 0;
+	while(i<4){
+		if(namelist.indexOf(document.querySelector('.table'+c+' .row'+i).value)!=-1){
+			namelist.splice(namelist.indexOf(document.querySelector('.table'+c+' .row'+i).value),1);
+			i=i+1;
+		}else{
+			i=i+1;
+		}
+	}
+}
+
+makeroster.gronight = function(){
+	if(c!=0){
+		var h=c-1;
+		if(r==0 || r==1){
+			if(namelist.indexOf(document.querySelector('.table'+h+' .row3').value)!=-1){
+				namelist.splice(namelist.indexOf(document.querySelector('.table'+h+' .row3').value),1);
+			}
+		}
+	}
+}
+
+makeroster.grochecked = function(){
+	var i =0;
+	while(i<12){
+		var h = 0;
+		while(h<7){
+			if(document.querySelector('.n'+i+' #date'+h).checked){
+				if(namelist.indexOf(document.querySelector('.n'+i+' .name'+i).value)!=-1){
+				namelist.splice(namelist.indexOf(document.querySelector('.n'+i+' .name'+i).value),1);
+				}
+			}
+			h = h + 1;
+		}
+		i=i+1;
+	}
+}
+
+makeroster.gronotimelist = function(){
+	if(namelist!=[]){
+		var i = 0;
+		var k = 0;
+		var h = namelist.length;
+		while(k<h){
+			if(timelist.indexOf(namelist[i])!=-1){	 
+				i=i+1;
+				k=k+1;
+			}else{
+				namelist.splice(namelist.indexOf(namelist[i]),1);
+				k=k+1;
+			}
+		}
+	}
+}
+
+makeroster.randalign = function(){
+	if(document.querySelector('.table'+c+' .row'+r).value!=""){
+	}else{
+		var ran = namelist[Math.floor(Math.random()*namelist.length)]
+		document.querySelector('.table'+c+' .row'+r).value=ran;
+		//timelist에서 선택된 이름을 한번 뺀다
+		timelist.splice(timelist.indexOf(ran),1);
+	}
+}
+
+makeroster.resetnamelist = function(){
+	namelist.splice(0,namelist.length);
+}
+
+makeroster.getterminater = function(){
+	var terminater = []
+	var i =0;
+	while(i < 7){
+		var h = 0;
+		while(h<4){
+			terminater.push(document.querySelector('.table'+i+' .row'+h).value)
+			h = h+1;
+		}
+		i=i+1;
+	}
+}
+
+makeroster.iwilbeback = function(){
+	if(terminater.indexOf('undefined') !=-1){
+		var k = 0;
+		while(k<7){
+			var i = 0;
+			while(i<4){
+				if(document.querySelector('.table'+k+' .row'+i).value != ''){
+					document.querySelector('.table'+k+' .row'+i).value =''
+				}else{
+				}
+				i=i+1;	
+			}
+			k=k+1;
+		}
+		cant = cant + 1;
+	}else{
+		terminate = terminate + 1;
+	}
+}
+
+function getstarter(){
+	var starter = []
+	var i =0;
+	while(i < 7){
+		var h = 0;
+		while(h<4){
+			starter.push(document.querySelector('.table'+i+' .row'+h).value)
+			h = h+1;
+		}
+		i=i+1;
+	}
+	document.write(starter)
+}
 
 
 function deleteall(){
@@ -17,29 +167,62 @@ function deleteall(){
 		
 }
 
-function timeget(){
-	var timelist = []
-	var i=0;
-	while(i<12){
-		if(document.querySelector('.n'+i+' .times').value==''){
-		}else{
-			var h = 0;
-			while(h<document.querySelector('.n'+i+' .times').value){
-				timelist.push(document.querySelector('.name'+i).value)
-				h=h+1;
+function deletepart(){
+	var k = 0;
+	while(k<7){
+		var i = 0;
+		while(i<4){
+			if(document.querySelector('.table'+k+' .row'+i).value != ""){
+				if(document.querySelector('.table'+k+' .row'+i).value != starter[i+(k*4)]){
+						document.querySelector('.table'+k+' .row'+i).value =''
+				}
 			}
+			i=i+1;	
 		}
+		k=k+1;
+	}
+}
+
+function countall(){
+	var i = 0;
+	var b = 0;
+	while(i<12){
+		b=b+Math.floor(document.querySelector('.n'+i+' .times').value)
 		i=i+1;
 	}
-	
+	var g = 0;
+	while(g<12){
+		if(b==28){
+		document.querySelector('.n'+g+' .times').style.backgroundColor='green';
+		}else{
+			document.querySelector('.n'+g+' .times').style.backgroundColor='red';
+		}
+		g=g+1;
+	}
 }
+
+
+//////////////////////////////////////////////////////////////////
+
+
 
 function get(){
 	var cant = 0;
 	var terminate = 0;
-
+	//make roster버튼을 누르기전에 이미 테이블에 배치된 이름을 고정시키기 위해 starter를 만든다.
+	var starter = []
+	var i =0;
+	while(i < 7){
+		var h = 0;
+		while(h<4){
+			starter.push(document.querySelector('.table'+i+' .row'+h).value)
+			h = h+1;
+		}
+		i=i+1;
+	}
+	
 	while(terminate<1){
-		if(cant==100){
+		if(cant==1000){
 			terminate = 1;
 			alert('해당 인원으로는 조건을 만족하는 근무표 생성이 불가능 합니다.')
 		}
@@ -65,6 +248,7 @@ function get(){
 			var r = 0;
 			while(r<4){
 				//명단에서 이름 가져와서 namelist 완성
+				var namelist = [];
 				var i = 0
 				while(i<12){
 					namelist.push(document.querySelector('.name'+i).value);
@@ -105,14 +289,10 @@ function get(){
 				//namelist에서 근무 열외 요일 체크된 이름 제외
 				var i =0;
 				while(i<12){
-					var h = 0;
-					while(h<7){
-						if(document.querySelector('.n'+i+' #date'+h).checked){
-							if(namelist.indexOf(document.querySelector('.n'+i+' .name'+i).value)!=-1){
-							namelist.splice(namelist.indexOf(document.querySelector('.n'+i+' .name'+i).value),1);
-							}
-						}
-						h = h + 1;
+					if(document.querySelector('.n'+i+' #date'+c).checked){
+						if(namelist.indexOf(document.querySelector('.n'+i+' .name'+i).value)!=-1){
+						namelist.splice(namelist.indexOf(document.querySelector('.n'+i+' .name'+i).value),1);
+					  }
 					}
 					i=i+1;
 				}
@@ -133,8 +313,8 @@ function get(){
 					}
 				//table에 이미 이름이 작성되있는칸을 제외하고 
 				//위에서 만들어진 namelist에서 랜덤으로 이름을 해당table에 넣는다.
-				if(document.querySelector('.table'+c+' .row'+r).value!=""){
-				}else{
+				if(document.querySelector('.table'+c+' .row'+r).value==""){
+				//}else{
 					var ran = namelist[Math.floor(Math.random()*namelist.length)]
 					document.querySelector('.table'+c+' .row'+r).value=ran;
 					//timelist에서 선택된 이름을 한번 뺀다
@@ -147,9 +327,9 @@ function get(){
 			}
 			c = c+1;
 		}
+	//만들어진 근무표의 모든 value를 가져와서 terminater 배열을 만든다.	
 			var terminater = []
 			var i =0;
-		//만들어진 근무표의 모든 value를 가져와서 terminater 배열을 만든다.	
 			while(i < 7){
 				var h = 0;
 				while(h<4){
@@ -158,15 +338,16 @@ function get(){
 				}
 				i=i+1;
 			}
-		//terminater 배열중 undefined가 있을 경우 다지우고 다시한다.
-			if(terminater.indexOf('undefined') !=-1){
+		//terminater 배열중 undefined가 있을 경우 starter를 제외하고 다지우고 다시한다.
+		 if(terminater.indexOf('undefined') !=-1){
 				var k = 0;
 				while(k<7){
 					var i = 0;
 					while(i<4){
-						if(document.querySelector('.table'+k+' .row'+i).value != ''){
-							document.querySelector('.table'+k+' .row'+i).value =''
-						}else{
+						if(document.querySelector('.table'+k+' .row'+i).value != ""){
+							if(document.querySelector('.table'+k+' .row'+i).value != starter[i+(k*4)]){
+									document.querySelector('.table'+k+' .row'+i).value =''
+							}
 						}
 						i=i+1;	
 					}
@@ -175,7 +356,7 @@ function get(){
 				cant = cant + 1;
 			}else{
 				terminate = terminate + 1;
-		}
+			}
 		
 		
 		
