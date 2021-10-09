@@ -1,8 +1,37 @@
-h1{
+
+
+.title{
 	text-align:center;
 	border-bottom:5px solid black;
 	padding-bottom:20px;
+	padding-top:20px;
+	margin-bottom:100px;
+	color:black;
+	font-weight:900;
+	text-decoration:none;
+	display:block;
+	font-size:40px;
 } 
+
+.navigation{
+	display:flex;
+	flex-flow:row;
+	width:60vw;
+	position:absolute;
+	top:100px;
+	justify-content:space-evenly;
+}
+
+.nav{
+	border:1px solid white;
+	height:40px;
+	flex-basis:33%;
+	text-align:center;
+	text-decoration:none;
+	color:white;
+	font-size:18px;
+	background:black;
+}
 
 body{
 	margin:0;
