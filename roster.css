@@ -1,8 +1,6 @@
-
-
 .title{
 	text-align:center;
-	border-bottom:5px solid black;
+	border-bottom:5px solid #5f4339;
 	padding-bottom:20px;
 	padding-top:20px;
 	margin-bottom:100px;
@@ -11,6 +9,7 @@
 	text-decoration:none;
 	display:block;
 	font-size:40px;
+	background-color:#4e342e
 } 
 
 .navigation{
@@ -30,34 +29,37 @@
 	text-decoration:none;
 	color:white;
 	font-size:18px;
-	background:black;
+	background:#260e04;
 }
 
 body{
 	margin:0;
+	background-color:#be9c91;
 }
 
 .times{
 	text-align:center;
 }
 
-.buttons{
-	display:flex;
-	flex-flow:row nowrap;
-	justify-content:center;
-}
-
 .button{
 	width:100px;
 	height:60px;
-	
+	background-color:#8d6e63;
 }
+
+.buttons{
+		display:flex;
+		flex-flow:row nowrap;
+		justify-content:center;
+		margin-bottom:100px;
+	}
 
 .row{
 	border:1px solid black;
 	width:100px;
 	height:50px;
 	text-align:center;
+	background-color:#be9c91;
 }
 
 .table4 .row3,
@@ -68,8 +70,25 @@ body{
 .table6 .row0,
 .table6 .row1,
 .table6 .row2{
-	background:gray;
+	background:#8d6e63;
 }
+
+.n0,.n2,.n4,.n6,.n8,.n10{
+	background:#8d6e63;
+}
+
+.name{
+	width:80px;
+	text-align:center;
+	background-color:#be9c91;
+}
+
+.times{
+		width:40px;
+		margin-left:20px;
+		margin-right:20px;
+		background-color:#be9c91;
+	}
 
 .table{
 	display:flex;
@@ -79,21 +98,18 @@ body{
 
 .all{
 	display:flex;
+	margin-bottom:30px;
 }
 
 .body{
 	display:flex;
 	justify-content:space-evenly;
+	flex-flow:row wrap;
 }
 .namelist{
 	display:flex;
 	flex-flow:column nowrap;
-	
-}
-
-.name{
-	width:80px;
-	text-align:center;
+	margin-bottom:30px;
 }
 .nameanddate{
 	display:flex;
@@ -102,20 +118,9 @@ body{
 	height:30px;
 }
 
-.n0,.n2,.n4,.n6,.n8,.n10{
-	background:gray;
+input[type="reset"]{
+	background-color:#8d6e63;
 }
-
-.times{
-	width:40px;
-	margin-left:20px;
-	margin-right:20px;
-}
-
-
-
-
-
 
 
 
