@@ -12,6 +12,13 @@
 	background-color:#4e342e
 } 
 
+li{
+	margin-bottom:30px;
+}
+
+ol{
+	margin-top:20px;
+}
 .navigation{
 	display:flex;
 	flex-flow:row;
@@ -34,7 +41,7 @@
 
 body{
 	margin:0;
-	background-color:#be9c91;
+	background-color:white;
 }
 
 .times{
@@ -42,16 +49,38 @@ body{
 }
 
 .button{
+	background-color:#8d6e63;
 	width:100px;
-	height:60px;
+	height:50px;
+	margin-right:10px;
+}
+
+.choose{
+	border:1px solid black;
+	display:flex;
+	flex-flow:column;
+	margin-right:10px;
 	background-color:#8d6e63;
 }
 
+.dlabel{
+	font-size:13px;
+	width:90px;
+}
+
 .buttons{
-		display:flex;
-		flex-flow:row nowrap;
-		justify-content:center;
-		margin-bottom:100px;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	margin-bottom:100px;
+	}
+
+.buttons1{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	margin-bottom:30px;
+	margin-top:30px;
 	}
 
 .row{
@@ -99,6 +128,7 @@ body{
 .all{
 	display:flex;
 	margin-bottom:30px;
+	position:relative;
 }
 
 .body{
@@ -122,9 +152,23 @@ input[type="reset"]{
 	background-color:#8d6e63;
 }
 
+input[type="checkbox"]{
+	width:20px;
+	height:20px;
+}
 
+label{
+	cursor:pointer;
+}
 
+input{
+	cursor:pointer;
+}
 
+.doublecheck{
+	width:20px;
+	height:20px;
+}
 
 
 
