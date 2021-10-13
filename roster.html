@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>roster</title>
 	<link rel="stylesheet" href="roster.css">
-	
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X78DJDSZSC"></script>
 <script>
@@ -14,7 +15,7 @@
 
   gtag('config', 'G-X78DJDSZSC');
 </script>
-	
+
 </head>
 <body>
 	<a class="title" href="roster.html">
@@ -31,7 +32,12 @@
 			<a href="roster-help.html" class="nav roster1">
 				도움말
 			</a>
+			
+			<input type="week" name="weekvalue">
 		</div>
+		
+		
+		
 		
 		<div class="all">
 				
@@ -92,7 +98,7 @@
 			&nbsp &nbsp &nbsp 근무 열외 요일
 			<form class="nameanddate n0">
 				<input type="text" value="정범석" class="name name0">
-				<input type="text" class="times 0name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 0name" onchange="autocheck()">
 				<label for="date0">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -112,7 +118,7 @@
 			
 			<form class="nameanddate n1">
 				<input type="text" value="이형호" class="name name1">
-				<input type="text" class="times 1name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 1name" onchange="autocheck()">
 				<label for="date0">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -132,7 +138,7 @@
 			
 			<form class="nameanddate n2">
 				<input type="text" value="이동일" class="name name2">
-				<input type="text" class="times 2name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 2name" onchange="autocheck()">
 				<label for="date0 2name">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -152,7 +158,7 @@
 			
 			<form class="nameanddate n3">
 				<input type="text" value="박정재" class="name name3">
-				<input type="text" class="times 3name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 3name" onchange="autocheck()">
 				<label for="date0 3name">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -172,7 +178,7 @@
 			
 			<form class="nameanddate n4">
 				<input type="text" value="전주혁" class="name name4">
-				<input type="text" class="times 4name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 4name" onchange="autocheck()">
 				<label for="date0 4name">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -192,7 +198,7 @@
 			
 			<form class="nameanddate n5">
 				<input type="text" value="최태영" class="name name5">
-				<input type="text" class="times 5name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 5name" onchange="autocheck()">
 				<label for="date0 5name">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -212,7 +218,7 @@
 			
 			<form class="nameanddate n6">
 				<input type="text" value="이시현" class="name name6">
-				<input type="text" class="times 6name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 6name" onchange="autocheck()">
 				<label for="date0 6name">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -232,7 +238,7 @@
 			
 			<form class="nameanddate n7">
 				<input type="text" value="김해중" class="name name7">
-				<input type="text" class="times 7name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 7name" onchange="autocheck()">
 				<label for="date0 7name">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -252,7 +258,7 @@
 		
 			<form class="nameanddate n8">
 				<input type="text" value="배준호" class="name name8">
-				<input type="text" class="times 8name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 8name" onchange="autocheck()">
 				<label for="date0 8name">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -272,7 +278,7 @@
 		
 			<form class="nameanddate n9">
 				<input type="text" value="" class="name name9">
-				<input type="text" class="times 9name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 9name" onchange="autocheck()">
 				<label for="date0 9name">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -292,7 +298,7 @@
 			
 			<form class="nameanddate n10">
 				<input type="text" value="" class="name name10">
-				<input type="text" class="times 10name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 10name" onchange="autocheck()">
 				<label for="date0 10name">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -312,7 +318,7 @@
 			
 			<form class="nameanddate n11">
 				<input type="text" value="" class="name name11">
-				<input type="text" class="times 11name" onchange="autocheck()">
+				<input type="number" min="0" max="28" class="times 11name" onchange="autocheck()">
 				<label for="date0 11name">Mon</label>
 				<input type="checkbox" id="date0">
 				<label for="date1">Tue</label>
@@ -347,6 +353,8 @@
 		<input class="button" type="button" value="make roster" onclick="getstarter();get()">
 		
 		<input class="button" type="button" value="근무수 채우기" onclick="autocount();autocheck()">
+		
+		<input class="button" type="button" onClick="copy()" value="근무표 복사" />
 	</div>
 	
 	<div class="buttons">
