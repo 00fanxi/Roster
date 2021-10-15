@@ -237,7 +237,7 @@ function get(){
 	}
 	
 	while(terminate<1){
-		if(cant==12630){
+		if(cant==2000){
 			terminate = 1;
 			alert('해당 인원으로는 조건을 만족하는 근무표 생성이 불가능 합니다.')
 		}
