@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!-- 	<meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+	<title>roster</title>
+	<link rel="stylesheet" href="roster.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X78DJDSZSC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X78DJDSZSC');
+</script>
+
+</head>
+<body>
+	<a class="title" href="roster.html">
+		ROSTER
+	</a>
+	<div class="body">
+		<div class="navigation">
+			<a href="roster.html" class="nav roster1">유선
+			</a>
+			<a href="roster2.html" class="nav roster1">체계
+			</a>
+      <a href="roster3.html" class="nav roster3">무선
+			</a>
+			<a href="roster-help.html" class="nav roster1">
+				도움말
+			</a>
+			
+			<input type="week" name="weekvalue">
+		</div>
+		
+		
+		
+		
+		<div class="all">
+				
+			<div class="table table0">Mon
+				<input type="text" class="row row0" onchange="autocheck()">
+				<input type="text" class="row row1" onchange="autocheck()">
+				<input type="text" class="row row2" onchange="autocheck()">
+				<input type="text" class="row row3" onchange="autocheck()">
+			</div>
+
+			<div class="table table1">Tue
+				<input type="text" class="row row0" onchange="autocheck()">
+				<input type="text" class="row row1" onchange="autocheck()">
+				<input type="text" class="row row2" onchange="autocheck()">
+				<input type="text" class="row row3" onchange="autocheck()">
+			</div>
+
+			<div class="table table2">Wed
+				<input type="text" class="row row0" onchange="autocheck()">
+				<input type="text" class="row row1" onchange="autocheck()">
+				<input type="text" class="row row2" onchange="autocheck()">
+				<input type="text" class="row row3" onchange="autocheck()">
+			</div>
+
+			<div class="table table3">Thu
+				<input type="text" class="row row0" onchange="autocheck()">
+				<input type="text" class="row row1" onchange="autocheck()">
+				<input type="text" class="row row2" onchange="autocheck()">
+				<input type="text" class="row row3" onchange="autocheck()">
+			</div>
+
+			<div class="table table4">Fri
+				<input type="text" class="row row0" onchange="autocheck()">
+				<input type="text" class="row row1" onchange="autocheck()">
+				<input type="text" class="row row2" onchange="autocheck()">
+				<input type="text" class="row row3" onchange="autocheck()">
+			</div>
+
+			<div class="table table5">Sat
+				<input type="text" class="row row0" onchange="autocheck()">
+				<input type="text" class="row row1" onchange="autocheck()">
+				<input type="text" class="row row2" onchange="autocheck()">
+				<input type="text" class="row row3" onchange="autocheck()">
+			</div>
+
+			<div class="table table6">Sun
+				<input type="text" class="row row0" onchange="autocheck()">
+				<input type="text" class="row row1" onchange="autocheck()">
+				<input type="text" class="row row2" onchange="autocheck()">
+				<input type="text" class="row row3" onchange="autocheck()">
+			</div>
+
+		</div>
+		
+		<div class="namelist">
+			&nbsp &nbsp근무자 &nbsp &nbsp &nbsp 근무 수 
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+			&nbsp &nbsp &nbsp 근무 열외 요일
+			<form class="nameanddate n0">
+				<input type="text" value="전우진" class="name name0">
+				<input type="number" min="0" max="28" class="times 0name" onchange="autocheck()">
+				<label for="date0">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>	
+			
+			<form class="nameanddate n1">
+				<input type="text" value="박현빈" class="name name1">
+				<input type="number" min="0" max="28" class="times 1name" onchange="autocheck()">
+				<label for="date0">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>	
+			
+			<form class="nameanddate n2">
+				<input type="text" value="" class="name name2">
+				<input type="number" min="0" max="28" class="times 2name" onchange="autocheck()">
+				<label for="date0 2name">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>	
+			
+			<form class="nameanddate n3">
+				<input type="text" value="이승훈" class="name name3">
+				<input type="number" min="0" max="28" class="times 3name" onchange="autocheck()">
+				<label for="date0 3name">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>	
+			
+			<form class="nameanddate n4">
+				<input type="text" value="김성지" class="name name4">
+				<input type="number" min="0" max="28" class="times 4name" onchange="autocheck()">
+				<label for="date0 4name">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>	
+			
+			<form class="nameanddate n5">
+				<input type="text" value="이효제" class="name name5">
+				<input type="number" min="0" max="28" class="times 5name" onchange="autocheck()">
+				<label for="date0 5name">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>	
+			
+			<form class="nameanddate n6">
+				<input type="text" value="이성민" class="name name6">
+				<input type="number" min="0" max="28" class="times 6name" onchange="autocheck()">
+				<label for="date0 6name">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>
+			
+			<form class="nameanddate n7">
+				<input type="text" value="허재원" class="name name7">
+				<input type="number" min="0" max="28" class="times 7name" onchange="autocheck()">
+				<label for="date0 7name">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>
+		
+			<form class="nameanddate n8">
+				<input type="text" value="김요한" class="name name8">
+				<input type="number" min="0" max="28" class="times 8name" onchange="autocheck()">
+				<label for="date0 8name">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>
+		
+			<form class="nameanddate n9">
+				<input type="text" value="" class="name name9">
+				<input type="number" min="0" max="28" class="times 9name" onchange="autocheck()">
+				<label for="date0 9name">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>
+			
+			<form class="nameanddate n10">
+				<input type="text" value="" class="name name10">
+				<input type="number" min="0" max="28" class="times 10name" onchange="autocheck()">
+				<label for="date0 10name">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="date6">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>
+			
+			<form class="nameanddate n11">
+				<input type="text" value="" class="name name11">
+				<input type="number" min="0" max="28" class="times 11name" onchange="autocheck()">
+				<label for="date0 11name">Mon</label>
+				<input type="checkbox" id="date0">
+				<label for="date1">Tue</label>
+				<input type="checkbox" id="date1">
+				<label for="date2">Wed</label>
+				<input type="checkbox" id="date2">
+				<label for="date3">Thu</label>
+				<input type="checkbox" id="date3">
+				<label for="date4">Fri</label>
+				<input type="checkbox" id="date4">
+				<label for="date5">Sat</label>
+				<input type="checkbox" id="date5">
+				<label for="sun">Sun</label>
+				<input type="checkbox" id="date6">
+				<input class="rebutton" type="reset">
+			</form>
+		</div>
+	</div>
+	<div class="buttons1">
+		
+		<div class="choose">
+				<div class="dlabel">중복 허용
+					<input type="checkbox" class="doublecheck" id="double">
+				</div>
+				<select name="double">
+					<option selected value="2">2번 이하</option>
+					<option value="3">3번 이하</option>
+					<option value="4">4번 이하</option>
+				</select>
+		</div>
+		
+		<input class="button" type="button" value="make roster" style="background:red" onclick="getstarter();get()">
+		
+		<input class="button" type="button" value="근무수 채우기" onclick="autocount();autocheck()">
+		
+		<input class="button" type="button" onClick="copy()" value="근무표 복사" />
+	</div>
+	
+	<div class="buttons">
+		<input class="button" type="button" value="근무수 지우기" onclick="deletetimes();autocheck()">
+
+		<input class="button" type="button" value="근무자 지우기" onclick="deletenames();autocheck()">
+		
+		<input class="button" type="button" value="근무표 지우기1" onclick="deleteroster1();autocheck()">
+		
+		<input class="button" type="button" value="근무표 지우기2" onclick="deleteroster2();autocheck()">
+
+	</div>
+	<script src="roster.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
