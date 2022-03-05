@@ -1,5 +1,5 @@
 p{
-	width:100vw;
+	border : 1px solid red;
 }
 
 .title{
@@ -46,6 +46,8 @@ ol{
 body{
 	margin:0;
 	background-color:white;
+	display:flex;
+	flex-flow:column nowrap;
 }
 
 .times{
