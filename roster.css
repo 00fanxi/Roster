@@ -1,6 +1,4 @@
-p{
-	border : 1px solid red;
-}
+
 
 .title{
 	text-align:center;
@@ -46,9 +44,6 @@ ol{
 body{
 	margin:0;
 	background-color:white;
-	display:flex;
-	flex-flow:column nowrap;
-	align-items : center;
 }
 
 .times{
