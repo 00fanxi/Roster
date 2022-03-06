@@ -6,12 +6,13 @@
 	padding-bottom:20px;
 	padding-top:20px;
 	margin-bottom:100px;
-	color:black;
+	color:yellow;
 	font-weight:900;
 	text-decoration:none;
+	width : 100%;
 	display:block;
 	font-size:40px;
-	background-color:#4e342e
+	background-color:red
 } 
 
 li{
